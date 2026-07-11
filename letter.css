@@ -1,0 +1,156 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ffd6e7,#ffeef5);
+overflow:hidden;
+}
+
+/* Floating Hearts Background */
+
+.background-hearts{
+position:fixed;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:0;
+}
+
+.background-hearts::before,
+.background-hearts::after{
+content:"💖 💕 ❤️ 💗 💞 💘";
+position:absolute;
+font-size:30px;
+animation:hearts 12s linear infinite;
+opacity:.5;
+}
+
+.background-hearts::after{
+left:60%;
+animation-duration:15s;
+}
+
+@keyframes hearts{
+0%{
+transform:translateY(100vh);
+}
+100%{
+transform:translateY(-120vh);
+}
+}
+
+/* Envelope Area */
+
+.envelope-area{
+position:relative;
+z-index:2;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+/* Envelope */
+
+.envelope{
+width:320px;
+height:210px;
+background:#ff6b81;
+position:relative;
+border-radius:8px;
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+/* Top Flap */
+
+.top{
+position:absolute;
+top:0;
+left:0;
+width:0;
+height:0;
+border-left:160px solid transparent;
+border-right:160px solid transparent;
+border-top:110px solid #ff8fa3;
+transform-origin:top;
+transition:1s;
+z-index:3;
+}
+
+/* Front */
+
+.front{
+position:absolute;
+bottom:0;
+left:0;
+width:0;
+height:0;
+border-left:160px solid #ff8fa3;
+border-right:160px solid #ff8fa3;
+border-top:105px solid transparent;
+border-bottom:105px solid #ff4d6d;
+z-index:2;
+}
+
+/* Button */
+
+#letterBtn{
+
+margin-top:35px;
+padding:15px 40px;
+border:none;
+border-radius:40px;
+font-size:20px;
+cursor:pointer;
+background:#ff4d6d;
+color:white;
+box-shadow:0 0 20px hotpink;
+transition:.3s;
+
+}
+
+#letterBtn:hover{
+
+transform:scale(1.08);
+
+}
+
+/* Letter */
+
+.letter{
+
+position:absolute;
+top:60px;
+width:340px;
+height:470px;
+background:white;
+border-radius:10px;
+padding:30px;
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+display:none;
+
+overflow:auto;
+
+z-index:5;
+
+}
+
+.letter h1{
+
+font-family:'Great Vibes',cursive;
+font-size:42px;
+color:#d63384;
+text-align:center;
+margin-bottom:20px;
+
+}
+
+.
