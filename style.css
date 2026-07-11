@@ -1,0 +1,156 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow:hidden;
+    background:#000;
+}
+
+/* Background Video */
+
+#bgVideo{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
+
+/* Dark Overlay */
+
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.45);
+    z-index:-1;
+}
+
+/* Main Container */
+
+.container{
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+/* Batman */
+
+.batman{
+    width:240px;
+    animation:float 3s ease-in-out infinite;
+    filter:drop-shadow(0 0 25px hotpink);
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-18px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* Heading */
+
+#typing{
+    color:white;
+    margin-top:25px;
+    font-size:38px;
+    font-weight:700;
+    text-shadow:0 0 15px hotpink;
+}
+
+/* Subtitle */
+
+.subtitle{
+    color:#ffd6ec;
+    margin-top:10px;
+    font-size:18px;
+}
+
+/* Button */
+
+#openBtn{
+
+margin-top:35px;
+
+padding:16px 42px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:20px;
+
+font-weight:600;
+
+cursor:pointer;
+
+background:linear-gradient(45deg,#ff4da6,#ff80bf);
+
+color:white;
+
+box-shadow:
+0 0 15px #ff4da6,
+0 0 35px #ff4da6;
+
+transition:.35s;
+
+}
+
+#openBtn:hover{
+
+transform:scale(1.08);
+
+box-shadow:
+0 0 25px deeppink,
+0 0 55px hotpink;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.batman{
+width:190px;
+}
+
+#typing{
+font-size:28px;
+}
+
+.subtitle{
+font-size:15px;
+}
+
+#openBtn{
+
+font-size:18px;
+
+padding:14px 34px;
+
+}
+
+}
